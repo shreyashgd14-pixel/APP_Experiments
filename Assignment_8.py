@@ -1,0 +1,21 @@
+import csv
+file=open("student.csv" , "w")
+writer=csv.writer(file)
+writer.writerow(["roll_no","name","marks"])
+writer.writerow([1,"ram",67])
+writer.writerow([2,"rahul",90])
+writer.writerow([3,"ramesh",76])
+reader=csv.reader(file)
+next(reader)
+for row in reader:
+        if row:
+         print("roll_no",row[0])
+         print("Name:",row[1])
+         print("marks :",row[2])
+file=open("student.csv" ,"r")
+file1=open("students.csv" ,"w")
+reader=csv.reader(file)
+writer=csv.writer(file1)
+writer.writerow(reader)
+file.close()
+file1.close()
