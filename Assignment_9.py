@@ -3,7 +3,7 @@ import json
 
 file_1= with open("student.csv","r")
 file_2= with open("students.json","r")
-data=["raj",3,10]
+data=(["raj",3,10])
 csv_reader= csv.reader(file_1)
 for row in csv_reader:
   data.append(row)
