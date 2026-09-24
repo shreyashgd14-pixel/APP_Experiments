@@ -1,21 +1,20 @@
 import csv
-file=open("student.csv" , "w")
-writer=csv.writer(file)
-writer.writerow(["roll_no","name","marks"])
-writer.writerow([1,"ram",67])
-writer.writerow([2,"rahul",90])
-writer.writerow([3,"ramesh",76])
-reader=csv.reader(file)
-next(reader)
-for row in reader:
-        if row:
-         print("roll_no",row[0])
-         print("Name:",row[1])
-         print("marks :",row[2])
-file=open("student.csv" ,"r")
-file1=open("students.csv" ,"w")
-reader=csv.reader(file)
-writer=csv.writer(file1)
-writer.writerow(reader)
+with open("student.txt", "w") as file:
+    file.write("Hello World \n")
+    file.write("Welcome to Mit adt\n")
+    file.write("branch cse\n")
+    file.write("SY -1\n")
+
+with open("student.txt", "r") as file:
+    lines = input_file.readlines()
+
+line_count = len(lines)
+
+
+first_two_lines = lines[:2]
+
+with open("student_2.txt", "w") as file2:
+    file2.writelines(first_two_lines)
+
 file.close()
-file1.close()
+file2.close()
