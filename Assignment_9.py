@@ -9,3 +9,5 @@ for row in csv_reader:
   data.append(row)
 json_file = json.reader(file_2)
 json.dump(data,json_file)
+file_1.close()
+file_2.close()
