@@ -4,9 +4,9 @@ class Employee:
         self.name = name
         self.salary = salary
 
-    @property
+  
     def category(self) -> str:
-        """Categorize employee based on salary thresholds."""
+       
         if self.salary >= 70000:
             return "High Salary"
         elif 40000 <= self.salary < 70000:
